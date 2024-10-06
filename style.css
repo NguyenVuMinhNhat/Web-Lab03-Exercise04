@@ -1,0 +1,332 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --primary-color: #007bff;
+    --secondary-color: #bbbbbb;
+}
+
+[data-theme='dark'] {
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --primary-color: #1a73e8;
+    --secondary-color: #6c757d;
+}
+
+p, li {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-color);
+    margin: 0;
+}
+
+
+
+h1,
+h3 {
+    font-family: "Caveat", "cursive";
+    font-optical-sizing: auto;
+    font-style: normal;
+    text-align: center;
+    color: var(--text-color);
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h3 {
+    font-size: 25px;    
+}
+
+h4 {
+    font-family: "Shadows Into Light", "cursive";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    color: var(--text-color);
+}
+
+a {
+    text-decoration: none;
+    color: rgb(43, 43, 116);
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 0.3fr 0.65fr;
+    gap: 30px;
+    padding: 16px;
+    width: 100%;
+    margin: 0;
+}
+
+.left-container {
+    height: auto;
+    border: 2px solid var(--text-color);
+    display: block;
+    background-color: var(--background-color);
+}
+
+.right-container {
+    height: 1500px;
+    border: 2px solid var(--text-color);
+    background-color: var(--background-color);
+}
+
+
+.left-container .header,
+.left-container .project {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1.5px solid var(--text-color);
+}
+
+.left-container .header {
+
+    padding: 20px;
+    gap: 15px;
+}
+
+
+.left-container .header img {
+    width: 40px;
+    height: 40px;
+}
+
+
+.list-group{
+    width: 100%;
+}
+
+.list-group .list-group-item{
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border: 1.5px solid var(--text-color);
+}
+
+.left-container .project{
+    border: 0;
+}
+
+.left-container .project h3,
+.left-container .work-experience h3 {
+    width: 100%;
+    border-bottom: 1.5px solid var(--text-color);
+    padding: 10px 0;
+}
+
+.work-position {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px;
+    border-bottom: 1.5px solid var(--text-color);
+}
+
+.left-container .work-position{
+    background-color: var(--secondary-color);
+}
+
+.education h3 {
+    width: 100%;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.education .text {
+    padding-left: 10px;
+    border-bottom: 1.5px solid var(--text-color);
+    padding-bottom: 15px;
+}
+
+.education .text .list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.left-container .teacher-review h3 {
+    padding: 12px 16px;
+    width: 90%;
+    text-align: left
+}
+
+.left-container .teacher-review {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.left-container .teacher-review .review {
+    width: 90%;
+    border-radius: 20px;
+    border: 1.5px solid var(--text-color);
+    padding: 12px 16px;
+}
+
+.left-container .teacher-review .review .text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.copyright {
+    padding: 20px;
+}
+
+.right-container header {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 30px;
+}
+
+.right-container .pic-name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.right-container header nav{
+    display: flex;
+    align-items: center;
+}
+
+.right-container header nav .breadcrumb{
+    margin-bottom: 0;
+} 
+
+.right-container .pic-name p{
+    margin-bottom: 0;
+}
+
+.right-container img {
+    width: 40px;
+    height: 40px;
+}
+
+.right-container .navbar {
+    display: flex;
+    align-items: center;
+}
+
+.right-container .title-container {
+    padding: 20px 80px 70px;
+    border-bottom: 1.5px solid var(--text-color);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+}
+
+
+.right-container .portfolio-container {
+    display: grid;
+    grid-template-columns: 0.26fr 0.41fr 0.33fr;
+}
+
+
+.right-container .portfolio-container .project,
+.right-container .portfolio-container .work-experience,
+.right-container .portfolio-container .education {
+
+    border: 1.5px solid var(--text-color);
+
+}
+
+.right-container .portfolio-container .project h3 {
+    padding: 12px 16px;
+    text-align: left;
+}
+
+.right-container .portfolio-container .project .project-name p {
+    padding: 12px 16px;
+}
+
+.right-container .portfolio-container .project .project-name .list-group .list-group-item:not(:last-child) {
+    border-bottom: 1.5px solid var(--text-color);
+}
+
+
+.right-container .portfolio-container .work-experience {
+    
+    display: grid;
+    grid-template-rows: 0.05fr 0.28fr;
+}
+
+.right-container .portfolio-container .work-experience h3{
+    align-items: center;
+    justify-content: center;
+    border-bottom: none;
+    padding: 10px 0;
+}
+
+.right-container .portfolio-container .work-experience .work-position{
+    background-color: var(--background-color);
+}
+
+.right-container .portfolio-container .work-experience .work-position:not(:last-child){
+    
+    border-bottom: 1.5px solid var(--text-color);
+}
+
+
+.right-container .portfolio-container .education h3{
+    text-align:left;
+    padding: 12px 16px;
+}
+
+
+.right-container .portfolio-container .education .text{
+    display: flex;
+    flex-direction: column;
+    padding: 12px 16px;
+    gap:20px;
+}
+
+.right-container .teacher-review{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-container .teacher-review h3{
+    text-align: left;
+    padding: 20px 16px;
+    width: 100%;
+}
+
+.right-container .teacher-review .review-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0 16px;
+    gap: 10px;
+}
+
+.right-container .teacher-review .review-container .review{
+    padding: 20px 16px;
+    border: 2px solid var(--text-color);
+    border-radius: 35px;
+}
+
+.right-container .teacher-review .review-container .review .text{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+
+.right-container footer .copyright{
+    padding-top: 120px ;
+}
